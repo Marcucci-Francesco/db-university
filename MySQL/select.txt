@@ -29,7 +29,7 @@ AND `year` = 1;
 
 SELECT *
 FROM `exams`
-WHERE `hour` > '14:00:00'
+WHERE HOUR(`hour`) >= 14
 AND `date` = '2020-06-20';
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
@@ -52,7 +52,7 @@ WHERE `phone` IS NULL;
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 
 INSERT INTO `students`(`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
-VALUES ('100', 'Francesco', 'Marcucci', '1999-06-23', 'MRCFNC99H23F844E', '2025-01-03', '621033', 'fmarcucci47@gmail.com'); 
+VALUES ('35', 'Francesco', 'Marcucci', '1999-06-23', 'MRCFNC99H23F844E', '2025-01-03', '123456', 'fmarcucci47@gmail.com'); 
 
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 
